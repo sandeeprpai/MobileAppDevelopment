@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobDev.Views.MonsterDetailPage">
+    <!--<StackLayout>
+        <Entry Text ="{Binding ID}"/>
+        <Entry Text="{Binding Speed}"/>
+        <Entry Text="{Binding HP}"/>
+        <Entry Text="{Binding Strength}"/>
+        <Entry Text="{Binding characterAttackLevel}"/>
+        <Entry Text="{Binding characterItemBonus}"/>
+        <Button Text="Delete"
+                Clicked="OnButtonClicked" HorizontalOptions="Start" />
+    </StackLayout>-->
+    <StackLayout>
+        <Image HeightRequest="200" HorizontalOptions="Start"
+               Source="{Binding Image}" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Name" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Entry Text="{Binding Name}" Grid.Row="0" Grid.Column="1" />
+            <Label Text="Speed" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Entry Text="{Binding Speed}" Grid.Row="1" Grid.Column="1" />
+            <Label Text="HP" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Entry Text="{Binding HP}" Grid.Row="2" Grid.Column="1" />
+            <Label Text="Strength" Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Entry Text="{Binding Strength}" Grid.Row="3" Grid.Column="1" />
+            <Label Text="Level" Grid.Row="4" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Entry Text="{Binding characterAttackLevel}" Grid.Row="4" Grid.Column="1" />
+            <Label Text="Item Bonus" Grid.Row="5" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Entry Text="{Binding characterItemBonus}" Grid.Row="5" Grid.Column="1" />
+        </Grid>
+        <Button Text="Delete"
+                Clicked="OnButtonClicked" HorizontalOptions="Start" />
+    </StackLayout>
+        
+</ContentPage>
+
+
+

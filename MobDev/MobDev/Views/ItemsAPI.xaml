@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobDev.Views.ItemsAPI">
+    <ContentPage.Content>
+        <AbsoluteLayout x:Name="absoluteLayout">
+        <StackLayout x:Name="formforapi" Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Random" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+                <Entry Text="{Binding randomItemOption}" Grid.Row="0" Grid.Column="1" />
+                <Label Text="SuperItem" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+                <Entry Text="{Binding superItemOption}" Grid.Row="1" Grid.Column="1" />
+                
+            </Grid>
+
+        </StackLayout>
+        <StackLayout x:Name="forbutton">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Text="Search" Grid.Row="2" Grid.Column="0" Clicked="Search_Button_Clicked" />
+
+                </Grid>
+                
+        </StackLayout>
+</AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

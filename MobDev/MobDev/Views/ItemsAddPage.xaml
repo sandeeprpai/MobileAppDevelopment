@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobDev.Views.ItemsAddPage">
+
+        <!--<StackLayout>
+        <Entry Text="{Binding ID}" IsEnabled="False"/>
+        <Entry Text="{Binding Name}"/>
+        <Entry Text="{Binding Speed}"/>
+        <Entry Text="{Binding HP}"/>
+        <Entry Text="{Binding Strength}"/>
+        <Entry Text="{Binding characterAttackLevel}"/>
+        <Entry Text="{Binding characterItemBonus}"/>
+        <Button Text="Save"
+                Clicked="OnSaveClick" HorizontalOptions="Start" />
+    </StackLayout>-->
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Name" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+                <Entry Text="{Binding Name}" Grid.Row="0" Grid.Column="1" />
+
+                <Label Text="Type" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+                <Entry Text="{Binding Type}" Grid.Row="1" Grid.Column="1" />
+
+                <Label Text="Power Level" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+                <Entry Text="{Binding PowerLevel}" Grid.Row="2" Grid.Column="1" />
+
+            </Grid>
+            <Button Text="Save"
+                Clicked="OnSaveClick" HorizontalOptions="Start" />
+        </StackLayout>
+        <ContentPage.ToolbarItems>
+            <ToolbarItem Name="Save" Activated="OnSaveClick"
+                     Priority="0" Order="Secondary" />
+        </ContentPage.ToolbarItems>
+    </ContentPage>

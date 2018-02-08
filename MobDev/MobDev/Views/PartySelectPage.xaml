@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobDev.Views.PartySelectPage">
+    <StackLayout>
+        <Label Text="Select your team members"></Label>
+        <ListView x:Name="PlayerList" ItemSelected="OnPlayerSelect" ItemsSource="{ Binding Path = Players }" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--<ViewCell>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="{ Binding Name }"></Label>
+                    </StackLayout>
+                </ViewCell>-->
+                    <TextCell Text="{Binding Name}"></TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Start Battle"
+                Clicked="OnStartClicked" HorizontalOptions="Start" />
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobDev.Views.ItemDetailPage"
+             Title="{Binding Title}">
+    <StackLayout>
+        <Image HeightRequest="200" HorizontalOptions="Start"
+               Source="{Binding Image}" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Name" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="1" />
+            <Label Text="Description" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Label Text="{Binding Description}" Grid.Row="1" Grid.Column="1" />
+            <Label Text="Tier" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Label Text="{Binding Tier}" Grid.Row="2" Grid.Column="1" />
+            <Label Text="Creator" Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Label Text="{Binding Creator}" Grid.Row="3" Grid.Column="1" />
+            <Label Text="BodyPart" Grid.Row="4" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Label Text="{Binding BodyPart}" Grid.Row="4" Grid.Column="1" />
+            <Label Text="AttribMod" Grid.Row="5" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Label Text="{Binding AttribMod}" Grid.Row="5" Grid.Column="1" />
+            <Label Text="Usage" Grid.Row="6" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Label Text="{Binding Usage}" Grid.Row="6" Grid.Column="1" />
+        </Grid>
+        <Button Text="Delete"
+                Clicked="OnButtonClicked" HorizontalOptions="Start" />
+    </StackLayout>
+
+</ContentPage>

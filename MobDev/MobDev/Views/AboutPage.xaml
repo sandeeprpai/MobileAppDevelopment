@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobDev.Views.AboutPage"
+             xmlns:vm="clr-namespace:MobDev.ViewModels;"
+             Title="{Binding Title}">
+  <ContentPage.BindingContext>
+    <vm:AboutViewModel />
+  </ContentPage.BindingContext>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+      <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+        <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+          <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64"/>
+        </ContentView>
+      </StackLayout>
+    </StackLayout>
+    <ScrollView Grid.Row="1">
+      <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+          <Image HeightRequest="200" HorizontalOptions="Start"
+                 Source="MobDevTeamPic.jpg" />
+                <Label FontSize="22">
+          <Label.FormattedText>
+            <FormattedString>
+              <FormattedString.Spans>
+                <Span Text="Team Dropouts" FontAttributes="Bold" FontSize="22"/>
+                <Span Text=" "/>
+              </FormattedString.Spans>
+            </FormattedString>
+          </Label.FormattedText>
+        </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="CPSC 5910 SQ  &#x0a;" />
+
+                                <Span Text="&#x0a;Students: Braden Anderson, Sandeep Raja, Madeline Wong " FontAttributes="Bold"/>
+
+                                <Span x:Name="details" FontAttributes="Bold"></Span>
+
+                                <Span Text="&#x0a;Code Review: Braden Anderson, Sandeep Raja, Madeline Wong "/>
+
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Image Source="Game.jpg"></Image>
+
+                <!--<Button Margin="0,10,0,0"
+                Text="Learn more" 
+                Command="{Binding OpenWebCommand}"
+                BackgroundColor="{StaticResource Primary}"
+                TextColor="White"/> -->
+      </StackLayout>
+    </ScrollView>
+  </Grid>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobDev.Views.ScoresPage">
+    <StackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" Font="Bold,15" />
+            <Label Text="" Grid.Row="0" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Font="Bold,15" />
+            <Label Text="Team Score:" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" Font="Bold,15" />
+            <Label Text="{Binding finalScore}" Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Font="Bold,15" />
+            <Label Text="" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" Font="Bold,15" />
+            <Label Text="" Grid.Row="2" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Font="Bold,15" />
+        </Grid>
+        <ListView x:Name="Team" RowHeight="40" ItemSelected="OnScoreSelect">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Score}"></TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Restart Game" Clicked="OnRestartGame" />
+    </StackLayout>
+</ContentPage>
